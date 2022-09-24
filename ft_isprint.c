@@ -8,15 +8,4 @@ int ft_isprint(int c)
         return (1);
     else
         return (0);
-    
-}
-
-int main()
-{
-    char    a;
-    
-    a = '1';
-    printf("Si es char 2, 1 ok! : %d\n", ft_isprint(a));
-    printf("Si es char 2, 1 ok! : %d", isprint(a));
-    return (0);
 }

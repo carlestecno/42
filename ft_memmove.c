@@ -1,32 +1,29 @@
-#include "libft.h"
+/* #include "libft.h" */
 #include <string.h>
 #include <stdio.h>
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+/* void    *ft_memmove(void *dest, const void *src, size_t n)
 {
     char *str;
     char *str1;
-    size_t i;
 
     str1 = (char *)dest;
     str = (char *)src;
-    i = 0;
-    while (i < n)
+    while (n--)
     {
-        str1[i] = str[i];
-        i++;
+        *str1++ = *str++;
     }    
     return (str1);
-}
+} */
 
 int main()
 {
-    char    str[] = "Patata de llangonissa";
-    char    dest[50];
+    char    *str= "1234 6789 abcd fghi";
+
     
-    ft_memmove(dest, str, 1*sizeof(int));
-    printf("Lstring0 es de: %s\n", dest);
-    memmove(dest, str, 3*sizeof(int));
-    printf("Lstring1 es de: %s\n", dest);
+    /* ft_memmove(str + 5, str, 10*sizeof(char));
+    printf("Lstring0 es de: %s\n", str); */
+    memmove(str + 5, str, 3*sizeof(int));
+    printf("Lstring1 es de: %s\n", str);
     return (0);
 }
