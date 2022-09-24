@@ -13,13 +13,17 @@ int ft_atoi(const char *nptr)
     i = 0;
     neg = 1;
     result = 0;
-    while (*nptr == ' ' ||  *nptr == '\t' || *nptr == '+')
+    while (*nptr == ' ' ||  *nptr == '\t')
     {
         nptr++;
     }
     if (*nptr == '-')
     {
         neg = -1;
+        nptr++;
+    }
+    else if (*nptr == '+')
+    {
         nptr++;
     }
     while (*nptr <= '9' && *nptr >= '0')
