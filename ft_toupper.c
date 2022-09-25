@@ -10,10 +10,3 @@ int ft_toupper(int c)
     }
     return (c);
 }
-
-int main(void)
-{
-    printf("El valor es de: %d\n", ft_toupper(' '));
-    printf("El valor es de: %d", toupper(' '));
-    return (0);
-}

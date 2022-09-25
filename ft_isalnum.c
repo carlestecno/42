@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 int ft_alnum(int c)
-{º
+{
     if (c <= 'Z' && c >= 'A') 
         return (1);
     else if (c <= 'z' && c >= 'a')

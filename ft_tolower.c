@@ -10,10 +10,3 @@ int ft_tolower(int c)
     }
     return (c);
 }
-
-int main(void)
-{
-    printf("El valor es de: %d\n", ft_tolower(' '));
-    printf("El valor es de: %d", tolower(' '));
-    return (0);
-}

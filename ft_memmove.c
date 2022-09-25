@@ -2,28 +2,42 @@
 #include <string.h>
 #include <stdio.h>
 
-/* void    *ft_memmove(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *restrict dest, const void *restrict src, size_t n)
 {
-    char *str;
-    char *str1;
+    char *str_dest;
+    char *str_source;
+    char *str_newdest;
+    char  temp;
 
-    str1 = (char *)dest;
-    str = (char *)src;
+    str_dest = (char *)dest;
+    str_source = (char *)src;
+    str_newdest = str_dest + (str_dest - str_source);
+    printf("la cadena de newdest: %c\n", *str_newdest);
+    printf("diferencia de (dest - source):%d\n", str_dest - str_source);
     while (n--)
     {
-        *str1++ = *str++;
-    }    
-    return (str1);
-} */
+      printf("str_dest abans: %c\n", *str_dest);
+      *str_dest = *str_source;
+      str_dest++;
+      str_source++;
+      *str_newdest = *str_dest;
+      printf("str_dest despres: %c\n", *str_dest);
+      temp  = *str_dest++;
+      printf("valor del temp:%c\n", temp);
+      *str_newdest++ = *str_dest++;
+      *(str_dest)++ = temp;
+      
+      printf("valor del str_newdest:%c\n", *str_newdest);
+    }
+    return (str_dest);
+}
+
 
 int main()
 {
-    char    *str= "1234 6789 abcd fghi";
-
+    char    str[] = "0123456789abcdfghikl";
+    // char    dest[50]  ="Patata de Patata";
     
-    /* ft_memmove(str + 5, str, 10*sizeof(char));
-    printf("Lstring0 es de: %s\n", str); */
-    memmove(str + 5, str, 3*sizeof(int));
-    printf("Lstring1 es de: %s\n", str);
-    return (0);
+    ft_memmove(str + 5 , str  , 6* sizeof(char));
+    printf("Lstring0 es de: %s\n", str);
 }
