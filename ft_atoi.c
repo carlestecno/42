@@ -6,7 +6,7 @@
 
 int ft_atoi(const char *nptr)
 {
-    int a;
+    int i;
     int result;
     int neg;
     
