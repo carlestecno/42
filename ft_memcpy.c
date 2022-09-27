@@ -2,16 +2,16 @@
 #include <string.h>
 #include <stdio.h>
 
-void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
     char *str;
     char *str1;
 
     str1 = dst;
-    str = src;
+    str = (char*)src;
     while (n--)
     {
         *str1++ = *str++;
     }    
-    return (str1);
+    return (dst);
 }
