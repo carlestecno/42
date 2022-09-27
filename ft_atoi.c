@@ -6,11 +6,11 @@
 
 int ft_atoi(const char *nptr)
 {
-    int z;
+    int i;
     int result;
     int neg;
     
-    z= 0;
+    i = 0;
     neg = 1;
     result = 0;
     while (*nptr == ' ' ||  *nptr == '\t')
