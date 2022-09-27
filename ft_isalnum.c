@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_alnum(int c)
+int ft_isalnum(int c)
 {
     if (c <= 'Z' && c >= 'A') 
         return (1);
