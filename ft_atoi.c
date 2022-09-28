@@ -13,7 +13,7 @@ int ft_atoi(const char *nptr)
     i = 0;
     neg = 1;
     result = 0;
-    while (*nptr == ' ' ||  *nptr == '\t')
+    while (*nptr == ' ' ||  (*nptr >= 9 && *nptr <= 13))
     {
         nptr++;
     }
@@ -32,12 +32,4 @@ int ft_atoi(const char *nptr)
         nptr++;
     }
     return (result * neg);
-}
-
-
-int main(void)
-{
-    printf("El valor0 es de: %d\n", ft_atoi("  +12563pp90"));
-    printf("El valor1 es de: %d", atoi("  +1256356popl78"));
-    return (0);
 }
