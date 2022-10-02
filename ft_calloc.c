@@ -9,15 +9,14 @@ void    *ft_calloc(size_t nmemb, size_t size)
     int *ptr;
 
     ptr = malloc(size * sizeof(int));
+	if (ptr == NULL)
+	{
+    	printf("no sha generat el malloc\n");
+	}
     while (size--)
     {
-    	printf("el valor de ptr: %d\n", ptr);
         *ptr++ = 0;  
-        printf("el valor de ptr: %d\n", ptr);
     }
-   
-    if (ptr != NULL)
-    	printf("Memoria dispinible\n");
     return (ptr - nmemb) ;
 }
 
