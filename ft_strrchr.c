@@ -1,39 +1,34 @@
-/* #include "libft.h" */
+//#include "libft.h"
 #include <string.h>
 #include <stdio.h>
 
-int ft_strlen(char *str);
-
-
-
 char    *ft_strrchr(const char *s, int c)
-{       
-    int i;
-    char    *str;
-
-    str = (char*)s;
-    i = ft_strlen(str);
-    printf("El valor de i: %d", i);
-    while (i >=0)
+{   
+    while (*s)
     {
-        if (str[i] == c)
-        {
-            break; 
-        } 
-        i--;
+        s++;
     }
-    return ((char*)s);
+    s--;
+    while(*s)
+    {
+        if (*s == c)
+        {
+            return((char *)s);
+        }
+		s--;    
+    }
+    return (0);
 }
 
  int main()
  {
-     char    *str;
+     char    *str1;
+     char	*str2;
      
-     str = ft_strrchr("Patata", 'a');
-     /* str = strrchr("Patata", 'a'); */
+     str1 = ft_strrchr("Patata", 'a');
+     str2 = strrchr("Patata", 'a');
     
-     printf("lstring es de: %s\n", str);
-     /* str = ft_strchr("Patata", 'c');
-     printf("lstring es de: %s\n", str); */
+     printf("lstring es de: %s\n", str1);
+     printf("lstring es de: %s\n", str2); 
      return (0);
  }

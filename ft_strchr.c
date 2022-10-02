@@ -1,4 +1,4 @@
-/* #include "libft.h" */
+#include "libft.h" 
 #include <string.h>
 #include <stdio.h>
 
@@ -8,9 +8,17 @@ char    *ft_strchr(const char *s, int c)
         {
             if (*s == c)
             {
-            	break; 
+            	return ((char *)s); 
             } 
             s++;
         }
-        return ((char*)s);
+        return (0);
+        
+}
+
+int main(void)
+{
+    printf("meu : %s\n", ft_strchr("Patata", ' '));
+    printf("func original: %s\n", strchr("Patata", ' '));
+    return (0);
 }
