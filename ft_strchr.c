@@ -18,7 +18,7 @@ char    *ft_strchr(const char *s, int c)
 
 int main(void)
 {
-    printf("meu : %s\n", ft_strchr("Patata", ' '));
-    printf("func original: %s\n", strchr("Patata", ' '));
+    printf("meu : %s\n", ft_strchr("Patata", 'a'));
+    printf("func original: %s\n", strchr("Patata", 'a'));
     return (0);
 }
