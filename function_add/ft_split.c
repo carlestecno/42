@@ -18,7 +18,7 @@ int main()
 	{
 		printf("len bucle:%d\n", ptr1-ptr2);
 		ptr[i] = (char*)malloc(ptr1-ptr2);
-		ptr[i] = 'abc';
+		ft_memset(ptr[i], ptr2, ptr2 - ptr1);
 		printf("ptr: %s\n", ptr[i]);
 		ptr1++;
 		ptr2 = ptr1;
