@@ -24,6 +24,6 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 //   char  *src = "Patata";
 //   char  dest[50];
 
-//   printf("El valor int de: %d i str: %s", strlcpy(dest, src, 2));
+//   printf("El valor int de: %d i str: %s", strlcpy(dest, src, 2), dst);
 //   return (0);
 // }

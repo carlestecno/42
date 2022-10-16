@@ -11,23 +11,13 @@ size_t ft_count(char *str, char c)
 	flag = 0;
 	while (*str)
 	{
-		if (*str == c)
-		{
-			flag = 0;
-		}
-		else if(*str != c && flag == 0)
-		{
-			flag = 1;
-			count++;
-		}
-		str++;
+		printf("len bucle:%d\n", ptr1-ptr2);
+		ptr[i] = (char*)malloc(ptr1-ptr2);
+		ptr[i] = 'abc';
+		printf("ptr: %s\n", ptr[i]);
+		ptr1++;
+		ptr2 = ptr1;
 	}
-	return (count);
+	printf("string_final_es: %s\n", ptr2);
+	printf("string len:%i", strlen(ptr2));
 }
-
-int main()
-{
-	char *str= "   a   b c a   bc a b ";
-	printf("%lu", ft_count(str, ' '));
-}
-	
