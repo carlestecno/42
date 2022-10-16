@@ -26,5 +26,5 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
 int main()
 {
-    printf("El valor original es de: %s", ft_substr("Patata", 7, 10 ));
+    printf("El valor original es de: %s", ft_substr("Patata", 5, 1 ));
 }

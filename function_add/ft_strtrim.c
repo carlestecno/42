@@ -4,15 +4,14 @@
 
 size_t  ft_strlen(const char *str)
 {
-    size_t  i;
+	char *ptr;
 
-    i = 0;
+	ptr = str;
     while (*str)
     {
         str++;
-        i++;
     }
-    return (i);
+    return (str - ptr);
 }
 
 char    *ft_strchr(const char *s, int c)
@@ -21,13 +20,11 @@ char    *ft_strchr(const char *s, int c)
         {
             if (*s == c)
             {
-            	printf("El valor es: %c\n", *s);
-            	return ((char *)s); 
-            	
+            	return ((char *)s); 	
             } 
             s++;
         }
-        return (0);
+        return (NULL);
 }	
 
 int main(void)

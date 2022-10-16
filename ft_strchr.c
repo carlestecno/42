@@ -8,17 +8,18 @@ char    *ft_strchr(const char *s, int c)
         {
             if (*s == c)
             {
-            	return ((char *)s); 
+            	break; 
             } 
             s++;
         }
-        return (0);
+        printf("El valor de: %s\n", (char *)s);
+        return ((char *)s);
         
 }
 
 int main(void)
 {
-    printf("meu : %s\n", ft_strchr("Patata", 'a'));
-    printf("func original: %s\n", strchr("Patata", 'a'));
+    printf("meu : %s\n", ft_strchr("Patata", ' '));
+    printf("func original: %s\n", strchr("Patata", ' '));
     return (0);
 }
