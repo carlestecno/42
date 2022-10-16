@@ -16,7 +16,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
     {
         printf("No hi ha malloc");
     }
-    i = 0;
+i = 0;
     while (i < strlen(s1))
     {
         str[i] = s1[i];

@@ -18,24 +18,26 @@ void    *ft_memmove(void *dst, const void *src, size_t n)
 {
   char *str = src;
   char *desti = (char *)dst;
-  size_t i;
   
-  i = n;
   if (desti - str < 0)
   {
-    ft_memcpy(desti, str, n);
-  }
+    while (n--)
+	  {
+      *desti++ = *str++;
+    }
+	  return (dst);
+	}
   while(n--)
   {
     *(desti + n -1) = *(str + n -1);
   }
-  return ((char *)desti);
+  return (dst);
 }
 int main()
 {
   char word[20] = "0123456789abcdefghi";
   char word1[20] ="0123456789abcdefghi";
 
-  printf("string:%s\n", ft_memmove(word + 2, word, 12));
-  printf("string:%s\n", memmove(word1 + 2, word1 ,12));
+  printf("string:%s\n", ft_memmove(word, word + 2, 12));
+  printf("string:%s\n", memmove(word1 , word1 +2  ,12));
 }
