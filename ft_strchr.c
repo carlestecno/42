@@ -10,16 +10,16 @@ char    *ft_strchr(const char *s, int c)
             {
             	break; 
             } 
+            printf("*s:%i\n", s);
             s++;
         }
-        printf("El valor de: %s\n", (char *)s);
-        return ((char *)s);
-        
+        printf("direccio final:%i\n", s);
+        return (s);  
 }
 
 int main(void)
 {
-    printf("meu : %s\n", ft_strchr("Patata", ' '));
+    printf("meu : %i\n", ft_strchr("Patata", ' '));
     printf("func original: %s\n", strchr("Patata", ' '));
     return (0);
 }

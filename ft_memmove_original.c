@@ -19,17 +19,20 @@ void    *ft_memmove(void *dst, const void *src, size_t n)
   char *str = src;
   char *desti = (char *)dst;
   
-  if (desti - str < 0)
+  // if (desti - str < 0)
+  if (str > desti)
   {
     while (n--)
 	  {
       *desti++ = *str++;
     }
-	  return (dst);
 	}
-  while(n--)
+  else
   {
-    *(desti + n -1) = *(str + n -1);
+    while(n--)
+    {
+      *(desti + n -1) = *(str + n -1);
+    }
   }
   return (dst);
 }
@@ -41,3 +44,9 @@ int main()
   printf("string:%s\n", ft_memmove(word, word + 2, 12));
   printf("string:%s\n", memmove(word1 , word1 +2  ,12));
 }
+
+
+
+
+char a= "Hola";
+char b= "Hola a";

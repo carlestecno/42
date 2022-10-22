@@ -11,7 +11,18 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
     str = (char*)src;
     while (n--)
     {
-        *str1++ = *str++;
-    }    
+        *str1 = *str;
+        str1++;
+        str++;
+    }   
+    *str1 = *str;
     return (dst);
+}
+
+int main()
+{
+    char *src = "Holabamic";
+    char dest[] = "Adeu  amic";
+
+    printf("array: %s", ft_memcpy(dest, src, 4));
 }
