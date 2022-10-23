@@ -9,9 +9,9 @@ void    *ft_calloc(size_t nmemb, size_t size)
     int *ptr;
 
     ptr = malloc(size * sizeof(int));
-	if (ptr == NULL)
+	if (!ptr)
 	{
-    	printf("no sha generat el malloc\n");
+    	return (NULL);
 	}
     while (size--)
     {
