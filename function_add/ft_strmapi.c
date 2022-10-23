@@ -7,7 +7,6 @@ char    ft_interchange(unsigned int num, char c)
     return (c += num);
 }
 
-
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     char  *str;
@@ -15,6 +14,8 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
     i = 0;
     str = (char *)malloc((strlen(s) + 1) * sizeof(char));
+    if (!str)
+        return (NULL);
     while (s[i])
     {
         str[i] = f(i, s[i]);
@@ -28,6 +29,5 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 int main()
 {
     char str[] = "PATATa";
-    ft_strmapi(str, ft_interchange);
-    
+    ft_strmapi(str, ft_interchange);  
 }
