@@ -3,7 +3,7 @@
 
 size_t  ft_strlen(const char *str);
 
-void ft_putstr_ft(char *s, int fd)
+void ft_putstr_fd(char *s, int fd)
 {
     write(fd, s, ft_strlen(s));
 }
