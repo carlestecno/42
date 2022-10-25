@@ -4,22 +4,24 @@
 
 char    *ft_strchr(const char *s, int c)
 {
-        while (*s)
+    while (*s)
+    {
+        if (*s == (char)c)
         {
-            if (*s == c)
-            {
-            	break; 
-            } 
-            printf("*s:%i\n", s);
-            s++;
-        }
-        printf("direccio final:%i\n", s);
-        return (s);  
+            return ((char *)s);
+        } 
+        s++;
+    }
+    if (*s == (char)c)
+    {
+        return ((char *)s);
+    }
+    return (NULL);
 }
 
-int main(void)
-{
-    printf("meu : %i\n", ft_strchr("Patata", ' '));
-    printf("func original: %s\n", strchr("Patata", ' '));
-    return (0);
-}
+// int main(void)
+// {
+//     printf("meu : %i\n", ft_strchr("Patata", ' '));
+//     printf("func original: %s\n", strchr("Patata", ' '));
+//     return (0);
+// }
