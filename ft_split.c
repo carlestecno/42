@@ -1,3 +1,4 @@
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -10,11 +11,11 @@ char *ft_strncpy(char *dest, const char *src, size_t n)//torna un size de més
 	        while (n--)
 	        {
 	            dest[i] = src[i];
-                printf("direccio dest parcial: %u\n", &dest[i]);
+                // printf("direccio dest parcial: %u\n", &dest[i]);
 	            i++;
 	        }
 	        dest[i]= '\0';
-            printf("desti final: %u\n", &dest[i]);
+            // printf("desti final: %u\n", &dest[i]);
 	        return (dest);
 	    }
 	
@@ -72,7 +73,7 @@ size_t  ft_countwords(const char *str, char c)
     return (count);
 }
 
-void **ft_split(char const *s, char c)
+char    **ft_split(char const *s, char c)
 {
     int j;
     const char *ps;
@@ -99,8 +100,8 @@ void **ft_split(char const *s, char c)
     }
 }
 
-int main()
-{
-    printf("sizeofint:%i\n", sizeof(double));
-	ft_split("abc cdd bab baba  za  z a ", ' ');
-}
+// int main()
+// {
+//     printf("sizeofint:%i\n", sizeof(double));
+// 	ft_split("abc cdd bab baba  za  z a ", ' ');
+// }
